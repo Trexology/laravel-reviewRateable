@@ -1,7 +1,6 @@
-<!-- [![Build Status](https://travis-ci.org/Trexology/rating.svg?branch=master)](https://travis-ci.org/Trexology/rating) -->
-[![Latest Stable Version](https://poser.pugx.org/Trexology/rating/v/stable.svg)](https://packagist.org/packages/Trexology/rating) [![License](https://poser.pugx.org/Trexology/rating/license.svg)](https://packagist.org/packages/Trexology/rating)
-
-[![Total Downloads](https://poser.pugx.org/Trexology/rating/downloads.svg)](https://packagist.org/packages/Trexology/rating)
+[![Latest Stable Version](https://poser.pugx.org/trexology/reviewrateable/v/stable)](https://packagist.org/packages/trexology/reviewrateable)
+[![Total Downloads](https://poser.pugx.org/trexology/reviewrateable/downloads)](https://packagist.org/packages/trexology/reviewrateable)
+[![Latest Unstable Version](https://poser.pugx.org/trexology/reviewrateable/v/unstable)](https://packagist.org/packages/trexology/reviewrateable) [![License](https://poser.pugx.org/trexology/reviewrateable/license)](https://packagist.org/packages/trexology/reviewrateable)
 
 # Laravel ReviewRateable
 ReviewRateable system for laravel 5
