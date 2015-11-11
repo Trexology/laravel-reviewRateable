@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Trexology/rating.svg?branch=master)](https://travis-ci.org/Trexology/rating)
+<!-- [![Build Status](https://travis-ci.org/Trexology/rating.svg?branch=master)](https://travis-ci.org/Trexology/rating) -->
 [![Latest Stable Version](https://poser.pugx.org/Trexology/rating/v/stable.svg)](https://packagist.org/packages/Trexology/rating) [![License](https://poser.pugx.org/Trexology/rating/license.svg)](https://packagist.org/packages/Trexology/rating)
 
 [![Total Downloads](https://poser.pugx.org/Trexology/rating/downloads.svg)](https://packagist.org/packages/Trexology/rating)

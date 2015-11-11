@@ -1,0 +1,22 @@
+{
+    "name": "trexology/reviewrateable",
+    "description": "Rating syetem for Laravel 5",
+    "keywords": ["rating", "Ratable", "laravel", "ReviewRateable", "reviewable"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Trex Lim",
+            "email": "trexology@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Trexology\\ReviewRateable\\": "src/"
+        }
+    }
+}
