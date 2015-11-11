@@ -30,7 +30,7 @@ trait ReviewRateable
      *
      * @return mix
      */
-    public function sumReviewRateable()
+    public function sumRating()
     {
         return $this->ratings()
             ->selectRaw('SUM(rating) as sumReviewRateable')

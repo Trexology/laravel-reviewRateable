@@ -4,7 +4,7 @@ namespace Trexology\ReviewRateable\Contracts;
 
 use Illuminate\Database\Eloquent\Model;
 
-interface Rating
+interface ReviewRateable
 {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany

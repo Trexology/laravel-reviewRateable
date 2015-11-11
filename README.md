@@ -34,11 +34,11 @@ php artisan vendor:publish --provider="Trexology\ReviewRateable\ReviewRateableSe
 
 namespace App;
 
-use Trexology\ReviewRateable\Contracts\Rating;
+use Trexology\ReviewRateable\Contracts\ReviewRateable;
 use Trexology\ReviewRateable\Traits\ReviewRateable as ReviewRateableTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model implements Rating
+class Post extends Model implements ReviewRateable
 {
     use ReviewRateableTrait;
 }
