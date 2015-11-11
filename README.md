@@ -3,28 +3,28 @@
 
 [![Total Downloads](https://poser.pugx.org/Trexology/rating/downloads.svg)](https://packagist.org/packages/Trexology/rating)
 
-# Laravel Rating
-Rating system for laravel 5
+# Laravel ReviewRateable
+ReviewRateable system for laravel 5
 
 ## Installation
 
 First, pull in the package through Composer.
 
 ```js
-composer require Trexology/rating
+composer require trexology/reviewrateable
 ```
 
 And then include the service provider within `app/config/app.php`.
 
 ```php
 'providers' => [
-    Trexology\Rating\RatingServiceProvider::class
+    Trexology\ReviewRateable\ReviewRateableServiceProvider::class
 ];
 ```
 
 At last you need to publish and run the migration.
 ```
-php artisan vendor:publish --provider="Trexology\Rating\RatingServiceProvider" && php artisan migrate
+php artisan vendor:publish --provider="Trexology\ReviewRateable\ReviewRateableServiceProvider" && php artisan migrate
 ```
 
 -----
@@ -35,13 +35,13 @@ php artisan vendor:publish --provider="Trexology\Rating\RatingServiceProvider" &
 
 namespace App;
 
-use Trexology\Rating\Contracts\Rating;
-use Trexology\Rating\Traits\Rating as RatingTrait;
+use Trexology\ReviewRateable\Contracts\Rating;
+use Trexology\ReviewRateable\Traits\ReviewRateable as ReviewRateableTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model implements Rating
 {
-    use RatingTrait;
+    use ReviewRateableTrait;
 }
 ```
 
@@ -78,7 +78,7 @@ $post->deleteRating(1);
 $post->averageRating()
 ````
 
-### Fetch the rating percentage. 
+### Fetch the rating percentage.
 This is also how you enforce a maximum rating value.
 ````php
 $post->ratingPercent()

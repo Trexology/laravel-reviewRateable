@@ -1,10 +1,10 @@
 <?php
 
-namespace Trexology\Rating\Contracts;
+namespace Trexology\ReviewRateable\Contracts;
 
 use Illuminate\Database\Eloquent\Model;
 
-interface Ratingable
+interface Rating
 {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany

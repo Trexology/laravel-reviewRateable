@@ -1,6 +1,6 @@
 <?php
 
-namespace Trexology\Rating\Models;
+namespace Trexology\ReviewRateable\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,7 +19,7 @@ class Rating extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
-    public function ratingable()
+    public function reviewrateable()
     {
         return $this->morphTo();
     }
@@ -33,13 +33,13 @@ class Rating extends Model
     }
 
     /**
-     * @param Model $ratingable
+     * @param Model $reviewrateable
      * @param $data
      * @param Model $author
      *
      * @return static
      */
-    public function createRating(Model $ratingable, $data, Model $author)
+    public function createRating(Model $reviewrateable, $data, Model $author)
     {
         $rating = new static();
         $rating->fill(array_merge($data, [
@@ -47,7 +47,7 @@ class Rating extends Model
             'author_type' => get_class($author),
         ]));
 
-        $ratingable->ratings()->save($rating);
+        $reviewrateable->ratings()->save($rating);
 
         return $rating;
     }

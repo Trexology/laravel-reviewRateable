@@ -1,10 +1,10 @@
 <?php
 
-namespace Trexology\Rating;
+namespace Trexology\ReviewRateable;
 
 use Illuminate\Support\ServiceProvider;
 
-class RatingServiceProvider extends ServiceProvider
+class ReviewRateableServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
