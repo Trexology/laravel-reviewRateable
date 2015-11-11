@@ -10,6 +10,8 @@ class CreateRatingsTable extends Migration
         Schema::create('ratings', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('rating');
+            $table->string('title');
+            $table->string('body');
             $table->morphs('reviewrateable');
             $table->morphs('author');
             $table->timestamps();

@@ -59,7 +59,7 @@ trait ReviewRateable
      */
     public function rating($data, Model $author, Model $parent = null)
     {
-        return (new Rating())->createReviewRateable($this, $data, $author);
+        return (new Rating())->createRating($this, $data, $author);
     }
 
     /**
@@ -71,7 +71,7 @@ trait ReviewRateable
      */
     public function updateRating($id, $data, Model $parent = null)
     {
-        return (new Rating())->updateReviewRateable($id, $data);
+        return (new Rating())->updateRating($id, $data);
     }
 
     /**
@@ -81,6 +81,6 @@ trait ReviewRateable
      */
     public function deleteRating($id)
     {
-        return (new Rating())->deleteReviewRateable($id);
+        return (new Rating())->deleteRating($id);
     }
 }
