@@ -15,7 +15,7 @@ interface ReviewRateable
      *
      * @return mix
      */
-    public function averageRating();
+    public function averageRating($round= null);
 
     /**
      *

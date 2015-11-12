@@ -19,8 +19,14 @@ trait ReviewRateable
      *
      * @return mix
      */
-    public function averageRating()
+    public function averageRating($round= null)
     {
+      if ($round) {
+            return $this->ratings()
+              ->selectRaw('ROUND(AVG(rating), '.$round.') as averageReviewRateable')
+              ->pluck('averageReviewRateable');
+        }
+
         return $this->ratings()
             ->selectRaw('AVG(rating) as averageReviewRateable')
             ->pluck('averageReviewRateable');

@@ -77,6 +77,12 @@ $post->deleteRating(1);
 $post->averageRating()
 ````
 
+or
+
+````php
+$post->averageRating(2) //round to 2 decimal place
+````
+
 ### Fetch the rating percentage.
 This is also how you enforce a maximum rating value.
 ````php
