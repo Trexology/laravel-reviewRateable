@@ -83,6 +83,11 @@ or
 $post->averageRating(2) //round to 2 decimal place
 ````
 
+### Count total rating:
+````php
+$post->countRating()
+````
+
 ### Fetch the rating percentage.
 This is also how you enforce a maximum rating value.
 ````php

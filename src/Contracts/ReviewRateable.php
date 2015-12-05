@@ -21,6 +21,12 @@ interface ReviewRateable
      *
      * @return mix
      */
+    public function countRating();
+
+    /**
+     *
+     * @return mix
+     */
     public function sumRating();
 
     /**

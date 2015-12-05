@@ -36,6 +36,16 @@ trait ReviewRateable
      *
      * @return mix
      */
+    public function countRating(){
+      return $this->ratings()
+          ->selectRaw('count(rating) as countReviewRateable')
+          ->pluck('countReviewRateable');
+    }
+
+    /**
+     *
+     * @return mix
+     */
     public function sumRating()
     {
         return $this->ratings()
