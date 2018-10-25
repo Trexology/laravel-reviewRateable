@@ -18,5 +18,12 @@
         "psr-4": {
             "Trexology\\ReviewRateable\\": "src/"
         }
+    },
+    "extra": {
+      "laravel": {
+          "providers": [
+              "Trexology\\ReviewRateable\\ReviewRateableServiceProvider"
+          ]
+      }
     }
 }
