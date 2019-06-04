@@ -51,7 +51,8 @@ $post = Post::first();
 
 $rating = $post->rating([
     'title' => 'Some title',
-    'body' => 'Some body',
+    'body' => 'Some body', //optional
+    'anonymous' => 1, //optional
     'rating' => 5,
 ], $user);
 
@@ -62,7 +63,8 @@ dd($rating);
 ```php
 $rating = $post->updateRating(1, [
     'title' => 'new title',
-    'body' => 'new body',
+    'body' => 'new body', //optional
+    'anonymous' => 1, //optional
     'rating' => 3,
 ]);
 ```
@@ -86,6 +88,17 @@ $post->averageRating(2) //round to 2 decimal place
 ### Count total rating:
 ````php
 $post->countRating()
+````
+
+### Count rating meta (Count and Avg):
+````php
+$post->ratingMeta()
+````
+
+or
+
+````php
+$post->ratingMeta(2) //round to 2 decimal place
 ````
 
 ### Fetch the rating percentage.

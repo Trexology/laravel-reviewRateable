@@ -21,25 +21,26 @@ trait ReviewRateable
      */
     public function averageRating($round= null)
     {
-      if ($round) {
+        if ($round) {
             return $this->ratings()
               ->selectRaw('ROUND(AVG(rating), '.$round.') as averageReviewRateable')
-              ->pluck('averageReviewRateable');
+              ->pluck('averageReviewRateable')->first();
         }
 
         return $this->ratings()
-            ->selectRaw('AVG(rating) as averageReviewRateable')
-            ->pluck('averageReviewRateable');
+          ->selectRaw('AVG(rating) as averageReviewRateable')
+          ->pluck('averageReviewRateable')->first();
     }
 
     /**
      *
      * @return mix
      */
-    public function countRating(){
-      return $this->ratings()
+    public function countRating()
+    {
+        return $this->ratings()
           ->selectRaw('count(rating) as countReviewRateable')
-          ->pluck('countReviewRateable');
+          ->pluck('countReviewRateable')->first();
     }
 
     /**
@@ -98,5 +99,16 @@ trait ReviewRateable
     public function deleteRating($id)
     {
         return (new Rating())->deleteRating($id);
+    }
+
+    /**
+     *
+     * @return mixed
+     */
+    public function ratingMeta() {
+      return [
+        "avg" => $this->averageRating(),
+        "count" => $this->countRating(),
+      ];
     }
 }
