@@ -11,7 +11,7 @@ class CreateRatingsTable extends Migration
             $table->increments('id')->unsigned();
             $table->double('rating');
             $table->string('title');
-            $table->text('body');
+            $table->text('body')->nullable();
             $table->boolean('anonymous')->default(false);
             $table->morphs('reviewrateable');
             $table->morphs('author');
