@@ -105,10 +105,10 @@ trait ReviewRateable
      *
      * @return mixed
      */
-    public function ratingMeta() {
-      return [
-        "avg" => $this->averageRating(),
-        "count" => $this->countRating(),
-      ];
+    public function ratingMeta($round= null) {
+     return [
+       "avg" => $this->averageRating($round),
+       "count" => $this->countRating(),
+     ];
     }
 }
